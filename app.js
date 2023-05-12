@@ -9,6 +9,7 @@ app.use(cors());
 // routes
 const userRoute = require("./routes/user.route");
 const doctorRoute = require("./routes/doctor.route");
+const appointmentRoute = require("./routes/appointment.route");
 
 app.get("/", (req, res) => {
   res.send("Route is working! YaY!");
@@ -16,5 +17,6 @@ app.get("/", (req, res) => {
 
 app.use("/user", userRoute);
 app.use("/doctors", doctorRoute);
+app.use("/doctor", appointmentRoute);
 
 module.exports = app;
