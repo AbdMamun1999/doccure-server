@@ -32,7 +32,7 @@ const doctorSchema = mongoose.Schema(
     image: {
       type: String,
       required: true,
-      validate: [validator.isUrl, "wrong url"],
+    //   validate: [validator.isUrl, "wrong url"],
     },
     location: {
       type: String,
@@ -49,6 +49,6 @@ const doctorSchema = mongoose.Schema(
   }
 );
 
-const User = mongoose.model("Doctors", doctorSchema);
+const Doctor = mongoose.model("Doctors", doctorSchema);
 
-module.exports = User;
+module.exports = Doctor;
